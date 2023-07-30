@@ -1,11 +1,14 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://houseGG.tres" type="TileSet" id=1]
 [ext_resource path="res://objects/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://graphics/BlackGround.png" type="Texture" id=3]
 [ext_resource path="res://objects/Raspi.tscn" type="PackedScene" id=4]
-[ext_resource path="res://levels/dialoftest.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scripts/DialogBox.gd" type="Script" id=5]
 [ext_resource path="res://levels/raspizone.gd" type="Script" id=6]
+[ext_resource path="res://graphics/fonts/Zlusa _font.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://graphics/Player/idle1fred1.png" type="Texture" id=8]
+[ext_resource path="res://sounds/ggvoice.ogg" type="AudioStream" id=9]
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 9.5, 30.5 )
@@ -21,6 +24,31 @@ extents = Vector2( 2.5, 123.5 )
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 61.5, 3 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 32
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=7]
+use_mipmaps = true
+font_data = ExtResource( 7 )
+
+[sub_resource type="Animation" id=8]
+resource_name = "indicator"
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.13, 0.2 ),
+"transitions": PoolRealArray( 2.63902, 1 ),
+"update": 0,
+"values": [ Vector2( -308, -440 ), Vector2( -308, -460 ) ]
+}
 
 [node name="houseGG" type="Node2D"]
 
@@ -97,38 +125,59 @@ shape = SubResource( 4 )
 position = Vector2( -37.5, -130 )
 shape = SubResource( 4 )
 
-[node name="Control" parent="." instance=ExtResource( 5 )]
+[node name="Control" type="Control" parent="."]
 visible = false
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = -219.0
-margin_top = -197.0
-margin_right = -219.0
-margin_bottom = -197.0
+margin_left = 6.0
+margin_top = -25.0
+margin_right = 492.0
+margin_bottom = 259.0
 
-[node name="DialogBox" parent="Control" index="0"]
-margin_left = 266.0
-margin_top = 373.0
-margin_right = 660.0
-margin_bottom = 442.0
+[node name="DialogBox" type="ColorRect" parent="Control"]
+margin_left = 78.0
+margin_top = 204.0
+margin_right = 440.0
+margin_bottom = 271.0
+rect_pivot_offset = Vector2( 170, 57 )
+script = ExtResource( 5 )
+dialogPath = "res://Dialog0.json"
 
-[node name="Name" parent="Control/DialogBox" index="0"]
-margin_top = -6.0
-margin_bottom = 84.0
+[node name="Name" type="RichTextLabel" parent="Control/DialogBox"]
+margin_left = 24.0
+margin_top = -5.0
+margin_right = 194.0
+margin_bottom = 85.0
+custom_colors/default_color = Color( 0.772549, 0.643137, 0.243137, 1 )
+custom_fonts/normal_font = SubResource( 6 )
+text = "Fred"
 
-[node name="Text" parent="Control/DialogBox" index="1"]
-margin_left = 10.0
-margin_top = 28.0
-margin_right = 509.0
-margin_bottom = 68.0
+[node name="Text" type="RichTextLabel" parent="Control/DialogBox"]
+margin_left = 24.0
+margin_top = 29.0
+margin_right = 361.0
+margin_bottom = 65.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 7 )
+text = "Hello every bode, daddy in house!"
 
-[node name="Indicator" parent="Control/DialogBox" index="2"]
-position = Vector2( -506, -495 )
+[node name="Indicator" type="Polygon2D" parent="Control/DialogBox"]
+position = Vector2( -308, -454.57 )
+color = Color( 0.792157, 0.631373, 0.0784314, 1 )
+polygon = PoolVector2Array( 872, 544, 896, 544, 884, 555 )
 
-[node name="Sprite" parent="Control/DialogBox" index="3"]
-position = Vector2( -7, 8 )
-scale = Vector2( 2.5, 2.5 )
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/DialogBox/Indicator"]
+autoplay = "indicator"
+playback_process_mode = 0
+anims/indicator = SubResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="Control/DialogBox"]
+position = Vector2( 3, 10 )
+scale = Vector2( 2.3, 2.3 )
+texture = ExtResource( 8 )
+
+[node name="Timer" type="Timer" parent="Control/DialogBox"]
+one_shot = true
+
+[node name="ggvoice" type="AudioStreamPlayer" parent="Control/DialogBox"]
+stream = ExtResource( 9 )
 
 [connection signal="area_entered" from="Raspi/raspizone" to="Raspi/raspizone" method="_on_raspizone_area_entered"]
-
-[editable path="Control"]

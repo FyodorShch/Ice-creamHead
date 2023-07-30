@@ -7,21 +7,25 @@ var dialog
  
 var phraseNum = 0
 var finished = false
- 
 func _ready():
 	$Timer.wait_time = textSpeed
 	dialog = getDialog()
 	assert(dialog, "Dialog not found")
 	nextPhrase()
- 
+	
+		
+
 func _process(_delta):
+
 	$Indicator.visible = finished
+		
 	if Input.is_action_just_pressed("ui_accept"):
 		if finished:
 			nextPhrase()
+			$ggvoice.volume_db = 0
 		else:
 			$Text.visible_characters = len($Text.text)
- 
+			$ggvoice.volume_db = -80
 func getDialog() -> Array:
 	var f = File.new()
 	assert(f.file_exists(dialogPath), "File path does not exist")
@@ -45,17 +49,19 @@ func nextPhrase() -> void:
 	
 	$Name.bbcode_text = dialog[phraseNum]["Name"]
 	$Text.bbcode_text = dialog[phraseNum]["Text"]
-	
+	$ggvoice.volume_db = 0
 	$Text.visible_characters = 0
 	
 	var f = File.new()
 	
 	while $Text.visible_characters < len($Text.text):
 		$Text.visible_characters += 1
-		
+		$ggvoice.volume_db = 0
 		$Timer.start()
 		yield($Timer, "timeout")
 	
 	finished = true
 	phraseNum += 1
 	return
+	
+		
