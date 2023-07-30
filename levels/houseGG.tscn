@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://houseGG.tres" type="TileSet" id=1]
 [ext_resource path="res://objects/player.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://graphics/fonts/Zlusa _font.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://graphics/Player/idle1fred1.png" type="Texture" id=8]
 [ext_resource path="res://sounds/ggvoice.ogg" type="AudioStream" id=9]
+[ext_resource path="res://Screens/PauseMenu.tscn" type="PackedScene" id=10]
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 9.5, 30.5 )
@@ -179,5 +180,9 @@ one_shot = true
 
 [node name="ggvoice" type="AudioStreamPlayer" parent="Control/DialogBox"]
 stream = ExtResource( 9 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource( 10 )]
 
 [connection signal="area_entered" from="Raspi/raspizone" to="Raspi/raspizone" method="_on_raspizone_area_entered"]

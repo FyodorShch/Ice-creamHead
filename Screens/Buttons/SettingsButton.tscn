@@ -1,0 +1,11 @@
+[gd_scene format=2]
+
+[node name="SettingsButton" type="Button"]
+margin_left = 362.0
+margin_top = 250.0
+margin_right = 662.0
+margin_bottom = 350.0
+text = "Settings"
+flat = true
+
+[connection signal="pressed" from="." to="." method="_on_SettingsButton_pressed"]
