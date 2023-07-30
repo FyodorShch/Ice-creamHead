@@ -1,7 +1,11 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://scripts/player.gd" type="Script" id=1]
 [ext_resource path="res://graphics/Player/icecream_going.png" type="Texture" id=2]
+[ext_resource path="res://graphics/Player/icecream_going_up.png" type="Texture" id=3]
+[ext_resource path="res://graphics/Player/idle2fred2.png" type="Texture" id=4]
+[ext_resource path="res://graphics/Player/idle1fred1.png" type="Texture" id=5]
+[ext_resource path="res://objects/Using.gd" type="Script" id=6]
 
 [sub_resource type="AtlasTexture" id=3]
 atlas = ExtResource( 2 )
@@ -27,30 +31,73 @@ region = Rect2( 256, 0, 64, 64 )
 atlas = ExtResource( 2 )
 region = Rect2( 320, 0, 64, 64 )
 
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 3 )
+region = Rect2( 64, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 3 )
+region = Rect2( 128, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 3 )
+region = Rect2( 192, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 3 )
+region = Rect2( 256, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 3 )
+region = Rect2( 320, 0, 64, 64 )
+
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [  ],
-"loop": true,
-"name": "",
-"speed": 5.0
-}, {
 "frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
 "loop": true,
 "name": "down",
+"speed": 7.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ) ],
+"loop": true,
+"name": "up",
 "speed": 7.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 13.5, 5 )
 
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 18.5, 27.5 )
+
 [node name="player" type="KinematicBody2D"]
 script = ExtResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 3, 9 )
+position = Vector2( 3, 8 )
 frames = SubResource( 1 )
 animation = "down"
+frame = 2
+playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0.5, 27 )
 shape = SubResource( 2 )
+
+[node name="Using" type="Area2D" parent="."]
+monitoring = false
+monitorable = false
+script = ExtResource( 6 )
+
+[node name="UzingZone" type="CollisionShape2D" parent="Using"]
+position = Vector2( 1.5, 7.5 )
+shape = SubResource( 15 )

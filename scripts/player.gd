@@ -3,7 +3,7 @@ extends KinematicBody2D
 export var walk_speed = 650
 var x_input = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 var y_input = Input.get_action_strength("ui_up") - Input.get_action_strength("ui_down")
-var friction = 0.13
+var friction = 0.17
 var motion = Vector2.ZERO
 var sprint = false
 
@@ -42,11 +42,25 @@ func sprint(delta):
 		sprint = false
 		print(walk_speed)
 		
-func animation():
-	if motion.y < 0:
+func animation(delta):
+	if Input.get_action_strength("ui_down"):
 		$AnimatedSprite.play("down")
+	elif Input.get_action_strength("ui_up"):
+		$AnimatedSprite.play("up")
+	else:
+		$AnimatedSprite.play("idle")
+		
+func Using(delta):
+		if Input.get_action_strength("use"):
+			$Using.monitoring = true
+			$Using.monitorable = true
+		else:
+			$Using.monitoring = false
+			$Using.monitorable = false
 		
 func _physics_process(delta: float) -> void:
+	Using(delta)
+	animation(delta)
 	input(delta)
 	sprint(delta)
 	motion = move_and_slide(motion, Vector2.ZERO)
