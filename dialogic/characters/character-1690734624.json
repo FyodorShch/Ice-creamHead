@@ -1,21 +1,21 @@
 {
-	"color": "#fff9690a",
+	"color": "#fffc95ff",
 	"description": "",
-	"display_name": "Fred",
+	"display_name": "Raspi",
 	"display_name_bool": true,
-	"id": "character-1690725880.json",
+	"id": "character-1690734624.json",
 	"mirror_portraits": false,
-	"name": "gg.json",
+	"name": "Raspi.json",
 	"nickname": "",
 	"nickname_bool": false,
-	"offset_x": -10,
+	"offset_x": 0,
 	"offset_y": 0,
 	"portraits": [
 		{
 			"name": "Default",
-			"path": "res://graphics/Player/idle1fred1.png"
+			"path": "res://graphics/raspi/pinky1.png"
 		}
 	],
 	"scale": 500,
-	"theme": "default-theme.cfg"
+	"theme": "theme-1690735688.cfg"
 }

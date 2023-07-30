@@ -1,12 +1,33 @@
 {
 	"events": [
 		{
-			"animation": "[Default]",
-			"animation_length": 0,
-			"animation_wait": false,
+			"animation": "slide_in_right.gd",
+			"animation_length": 1,
+			"animation_wait": true,
 			"change_mirror_portrait": false,
 			"change_z_index": false,
 			"character": "character-1690725880.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": true,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"animation": "slide_in_right.gd",
+			"animation_length": 1,
+			"animation_wait": true,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1690734624.json",
 			"event_id": "dialogic_002",
 			"mirror_portrait": false,
 			"portrait": "Default",
@@ -14,9 +35,9 @@
 			"position": {
 				"0": false,
 				"1": false,
-				"2": true,
+				"2": false,
 				"3": false,
-				"4": false
+				"4": true
 			},
 			"type": 0,
 			"z_index": 0
@@ -31,7 +52,19 @@
 			"character": "character-1690725880.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "What abouy your sister?"
+			"text": "What yuo can tell me about your [wave amp=50 freq=2]\"sister\"[/wave] ?"
+		},
+		{
+			"character": "character-1690734624.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ohhhhh, my sister? my sisteeeer!!!!! I just cryyyyy, because i very love my dear Sisteeeeeer! Hn Hn Hn"
+		},
+		{
+			"character": "character-1690725880.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Don't worry my dear friend, i find kiler of you sister!\nBecause, i'm famous [wave amp=50 freq=2]detective FRED![/wave]"
 		}
 	],
 	"metadata": {

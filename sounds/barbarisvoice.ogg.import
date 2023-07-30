@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/barbarisvoice.ogg-d3c7a856e2b3229b43c2197f816d29a8.oggstr"
+
+[deps]
+
+source_file="res://sounds/barbarisvoice.ogg"
+dest_files=[ "res://.import/barbarisvoice.ogg-d3c7a856e2b3229b43c2197f816d29a8.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

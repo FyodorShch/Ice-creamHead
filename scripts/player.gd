@@ -1,5 +1,8 @@
 extends KinematicBody2D
 
+
+class_name player
+
 export var walk_speed = 650
 var x_input = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 var y_input = Input.get_action_strength("ui_up") - Input.get_action_strength("ui_down")
