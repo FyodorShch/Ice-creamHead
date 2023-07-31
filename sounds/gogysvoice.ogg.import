@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/gogysvoice.ogg-e6a58ca752419f3f0ef5744f9075f747.oggstr"
+
+[deps]
+
+source_file="res://sounds/gogysvoice.ogg"
+dest_files=[ "res://.import/gogysvoice.ogg-e6a58ca752419f3f0ef5744f9075f747.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

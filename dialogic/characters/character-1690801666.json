@@ -1,0 +1,21 @@
+{
+	"color": "#ff3c2902",
+	"description": "",
+	"display_name": "JJ",
+	"display_name_bool": true,
+	"id": "character-1690801666.json",
+	"mirror_portraits": false,
+	"name": "JJ.json",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://graphics/JJ and his wife/JJ2.png"
+		}
+	],
+	"scale": 500,
+	"theme": "theme-1690801713.cfg"
+}

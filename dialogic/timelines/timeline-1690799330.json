@@ -1,6 +1,99 @@
 {
 	"events": [
-
+		{
+			"animation": "2-fade_in_up.gd",
+			"animation_length": 0.5,
+			"animation_wait": true,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1690725880.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"animation": "2-fade_in_up.gd",
+			"animation_length": 0.5,
+			"animation_wait": true,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1690799344.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1690725880.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hello, Im a Fred - privat detective"
+		},
+		{
+			"character": "character-1690799344.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hi! My name is Gogy!!!\nI love new guests!!! What brought you here?"
+		},
+		{
+			"character": "character-1690725880.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Someone killed Raspi's sister, do you know something about her?"
+		},
+		{
+			"character": "character-1690799344.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Uh.. uh uh uh... I don... I don't know wat to say...\nShe was nice girl, I haven't been close to her, but...\nEveryone was friends with her except Mr Bastard\nHis name justifies him!!!\nShe dosen't deserve o die... I hope she finds peace in heaven!"
+		},
+		{
+			"character": "character-1690725880.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I don't think so, I don't think heaven exists at all."
+		},
+		{
+			"character": "character-1690799344.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Of course it exists! If you don't think so, you'll burn in hell in a frying pan!\nStupid atheist!!!"
+		},
+		{
+			"character": "character-1690725880.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Well, thank you, Gogy, I'll look at the house?"
+		},
+		{
+			"character": "character-1690799344.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "So be it"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
 	],
 	"metadata": {
 		"dialogic-version": "1.4.5",

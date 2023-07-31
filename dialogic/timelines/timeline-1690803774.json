@@ -1,0 +1,101 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1690725880.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1690803348.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1690725880.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hello, Im a Fred - privat detective"
+		},
+		{
+			"character": "character-1690803348.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[shake rate=30.0 level=6 connected=1]GET  ARE  FUCK  OUT  OF  HERE!!! [/shake]\n[shake rate=30.0 level=6 connected=1]WHAT  ARE  UR  STUPID  ASS  DOING  INTO  MY  HOUSE????[/shake]\nDidn't they teach you to knock,stupid beatch?!"
+		},
+		{
+			"character": "character-1690725880.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Im so sorry, Mr...\nSomeone killed Raspi's sister, do you know something about her?"
+		},
+		{
+			"character": "character-1690803348.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I don't care, she will burn in hell and all the inhabitants of this town!\n Everyone is ready to kill each other here!\nThey just look like the good guys!\nOne day I will take my gun and sing \"Pumped Up Kicks\" - Foster The Peaple"
+		},
+		{
+			"character": "character-1690725880.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Genocide is terrible!"
+		},
+		{
+			"character": "character-1690803348.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "As long as there are different people there is war\nAnd war is genocide. The world will be cleaner without people"
+		},
+		{
+			"character": "character-1690725880.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Sound stupid, well, I'll look at the house?"
+		},
+		{
+			"character": "character-1690803348.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "maybe"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1690803774.json",
+		"name": "bastardDialog"
+	}
+}

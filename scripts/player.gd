@@ -9,7 +9,7 @@ var y_input = Input.get_action_strength("ui_up") - Input.get_action_strength("ui
 var friction = 0.17
 var motion = Vector2.ZERO
 var sprint = false
-
+var animationidle = 0
 
 
 func input(delta):
@@ -21,11 +21,10 @@ func input(delta):
 		
 	if Input.get_action_strength("ui_right") and !Input.get_action_strength("ui_left"):
 		motion.x += walk_speed  * delta
-		$AnimatedSprite.flip_h = false
+		
 		
 	elif Input.get_action_strength("ui_left") and !Input.get_action_strength("ui_right"):
 		motion.x -= walk_speed  * delta
-		$AnimatedSprite.flip_h = true
 		
 	if Input.get_action_strength("ui_down") and !Input.get_action_strength("ui_up"):
 		motion.y += walk_speed  * delta
@@ -46,12 +45,25 @@ func sprint(delta):
 		print(walk_speed)
 		
 func animation(delta):
+
+		
 	if Input.get_action_strength("ui_down"):
 		$AnimatedSprite.play("down")
+		animationidle = 0
 	elif Input.get_action_strength("ui_up"):
 		$AnimatedSprite.play("up")
+		animationidle = 1
+	elif Input.get_action_strength("ui_left"):
+		$AnimatedSprite.play("going")
+		$AnimatedSprite.flip_h = false
+	elif Input.get_action_strength("ui_right"):
+		$AnimatedSprite.play("going")
+		$AnimatedSprite.flip_h = true
 	else:
-		$AnimatedSprite.play("idle")
+		if animationidle == 0:
+			$AnimatedSprite.play("idledown")
+		else:
+			$AnimatedSprite.play("idleup")
 		
 func Using(delta):
 		if Input.get_action_strength("use"):

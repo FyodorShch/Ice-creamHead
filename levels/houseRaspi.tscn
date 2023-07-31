@@ -1,13 +1,33 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://houseGG.tres" type="TileSet" id=1]
 [ext_resource path="res://objects/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://graphics/BlackGround.png" type="Texture" id=3]
 [ext_resource path="res://objects/Raspi.tscn" type="PackedScene" id=4]
-[ext_resource path="res://levels/raspizone.gd" type="Script" id=6]
+[ext_resource path="res://graphics/raspi/creamcorpse.png" type="Texture" id=5]
+[ext_resource path="res://scripts/raspizone.gd" type="Script" id=6]
+[ext_resource path="res://scripts/sistercorpse.gd" type="Script" id=7]
+[ext_resource path="res://scripts/mebel.gd" type="Script" id=8]
+[ext_resource path="res://scripts/cucumber.gd" type="Script" id=9]
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 52, 11 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 24.5, 30.5 )
+
+[sub_resource type="RectangleShape2D" id=12]
+
+[sub_resource type="RectangleShape2D" id=13]
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 10, 13.5 )
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 23, 22.5 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 29.25, 18.5 )
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 2.5, 124 )
@@ -60,6 +80,46 @@ cell_size = Vector2( 1, 1 )
 format = 1
 tile_data = PoolIntArray( -4718485, -536870901, 0, -4718448, -536870901, 0, -4194197, -536870901, 0, -4194160, -536870901, 0, -3604496, -1073741813, 0, -3669749, -1073741813, 0, -3080208, -1610612724, 0, -3145461, -1610612724, 0, -1048592, -1610612724, 0, -1113845, -1610612724, 0, 983024, -1610612724, 0, 917771, -1610612724, 0, 2949104, -1610612724, 0, 2949387, -1610612724, 0, 4980720, -1610612724, 0, 4981003, -1610612724, 0, 7077872, -1610612719, 0, 7012619, -1610612719, 0, 7929840, -1610612719, 0, 7995659, -1610612719, 0, 8454411, -1610612719, 0, 8650736, -1610612719, 0, 9437451, -1610612719, 0, 9633776, -1610612719, 0, 10486027, -1610612719, 0, 10616816, -1610612719, 0, 11599856, -1610612717, 0, 11534603, -1610612717, 0 )
 
+[node name="furniture" type="TileMap" parent="."]
+position = Vector2( 117, 54 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 1, 1 )
+format = 1
+tile_data = PoolIntArray( -983041, 43, 0, -1048495, 43, 0, -458548, 41, 0, -458505, 41, 0, -262119, 40, 0, 65760, 45, 0, 7471331, 43, 0, 9175254, 44, 0 )
+
+[node name="mebel" type="Area2D" parent="furniture"]
+script = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="furniture/mebel"]
+position = Vector2( 49, 13 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="furniture/mebel"]
+position = Vector2( 236.5, 144.5 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="furniture/mebel"]
+position = Vector2( 214, 14 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="furniture/mebel"]
+position = Vector2( 257, 14 )
+shape = SubResource( 13 )
+
+[node name="back5" type="TileMap" parent="."]
+position = Vector2( 117, 54 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 1, 1 )
+format = 1
+tile_data = PoolIntArray( -2424798, 63, 0, -130839, 46, 0, 10420453, 57, 0 )
+
+[node name="cucumber" type="Area2D" parent="back5"]
+script = ExtResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back5/cucumber"]
+position = Vector2( 235, 10.5 )
+shape = SubResource( 11 )
+
 [node name="Raspi" parent="." instance=ExtResource( 4 )]
 position = Vector2( 276, 58 )
 
@@ -70,8 +130,19 @@ script = ExtResource( 6 )
 position = Vector2( 0, 24.5 )
 shape = SubResource( 5 )
 
+[node name="Creamcorpse" type="Sprite" parent="."]
+position = Vector2( 148, 196 )
+texture = ExtResource( 5 )
+
+[node name="Area2D" type="Area2D" parent="Creamcorpse"]
+script = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Creamcorpse/Area2D"]
+position = Vector2( 1.75, 9 )
+shape = SubResource( 6 )
+
 [node name="player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 144, 107 )
+position = Vector2( 330, 82 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2( 205, 197 )
@@ -96,5 +167,11 @@ shape = SubResource( 4 )
 position = Vector2( -37.5, -130 )
 shape = SubResource( 4 )
 
+[connection signal="body_entered" from="furniture/mebel" to="furniture/mebel" method="_on_mebel_body_entered"]
+[connection signal="body_exited" from="furniture/mebel" to="furniture/mebel" method="_on_mebel_body_exited"]
+[connection signal="body_entered" from="back5/cucumber" to="back5/cucumber" method="_on_cucumber_body_entered"]
+[connection signal="body_exited" from="back5/cucumber" to="back5/cucumber" method="_on_cucumber_body_exited"]
 [connection signal="body_entered" from="Raspi/raspizone" to="Raspi/raspizone" method="_on_raspizone_body_entered"]
 [connection signal="body_exited" from="Raspi/raspizone" to="Raspi/raspizone" method="_on_raspizone_body_exited"]
+[connection signal="body_entered" from="Creamcorpse/Area2D" to="Creamcorpse/Area2D" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Creamcorpse/Area2D" to="Creamcorpse/Area2D" method="_on_Area2D_body_exited"]

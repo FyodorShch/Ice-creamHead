@@ -1,0 +1,21 @@
+{
+	"color": "#fff3e272",
+	"description": "",
+	"display_name": "Mr Bastard",
+	"display_name_bool": true,
+	"id": "character-1690803348.json",
+	"mirror_portraits": false,
+	"name": "bastard",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://graphics/Bastard/hunterhuhunter1.png"
+		}
+	],
+	"scale": 500,
+	"theme": "theme-1690803377.cfg"
+}
