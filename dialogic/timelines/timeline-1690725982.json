@@ -46,25 +46,47 @@
 			"character": "character-1690725880.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Hello my friend! I'm famous detective of icecream city!"
-		},
-		{
-			"character": "character-1690725880.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "What yuo can tell me about your [wave amp=50 freq=2]\"sister\"[/wave] ?"
+			"text": "Hello, Raspi, Im a Fred - private detective, what happend with your sister?"
 		},
 		{
 			"character": "character-1690734624.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Ohhhhh, my sister? my sisteeeer!!!!! I just cryyyyy, because i very love my dear Sisteeeeeer! Hn Hn Hn"
+			"text": "Good afternoon, Mr Fred, I-I... I'm so confused\nWhen I got home after walk - someo... someone k-killed her *hn hn hn*\nThis pervet just licked her at all completly!\nShe was so beautifull and sweety... her eyes were like a stars!\nWe loved watching anime and eating cucumbers, our favorite anime was \"PeLh Em\""
 		},
 		{
 			"character": "character-1690725880.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Don't worry my dear friend, i find kiler of you sister!\nBecause, i'm famous [wave amp=50 freq=2]detective FRED![/wave]"
+			"text": "Well well well... Did she have any friends or enemies?"
+		},
+		{
+			"character": "character-1690734624.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Only friends, she was on good terms with everyone!"
+		},
+		{
+			"character": "character-1690725880.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Thanks Raspi, I will definitley find this slut who killed her...\nAll so, if the game developers have time to make a final."
+		},
+		{
+			"character": "character-1690734624.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "What?"
+		},
+		{
+			"character": "character-1690725880.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Nevermind[wave]...[/wave]"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
 		}
 	],
 	"metadata": {
