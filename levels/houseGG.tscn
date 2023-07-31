@@ -1,10 +1,13 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://houseGG.tres" type="TileSet" id=1]
 [ext_resource path="res://objects/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://graphics/BlackGround.png" type="Texture" id=3]
 [ext_resource path="res://objects/Raspi.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Screens/PauseMenu.tscn" type="PackedScene" id=5]
 [ext_resource path="res://levels/raspizone.gd" type="Script" id=6]
+[ext_resource path="res://Screens/Map.tscn" type="PackedScene" id=7]
+[ext_resource path="res://levels/houseGG.gd" type="Script" id=8]
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 9.5, 30.5 )
@@ -22,9 +25,10 @@ extents = Vector2( 2.5, 123.5 )
 extents = Vector2( 61.5, 3 )
 
 [node name="houseGG" type="Node2D"]
+script = ExtResource( 8 )
 
 [node name="BlackGround" type="Sprite" parent="."]
-position = Vector2( 259, 157 )
+position = Vector2( 260, 160 )
 texture = ExtResource( 3 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -95,6 +99,15 @@ shape = SubResource( 4 )
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( -37.5, -130 )
 shape = SubResource( 4 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+pause_mode = 2
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource( 5 )]
+margin_right = 0.0
+margin_bottom = 0.0
+
+[node name="Map" parent="CanvasLayer" instance=ExtResource( 7 )]
 
 [connection signal="body_entered" from="Raspi/raspizone" to="Raspi/raspizone" method="_on_raspizone_body_entered"]
 [connection signal="body_exited" from="Raspi/raspizone" to="Raspi/raspizone" method="_on_raspizone_body_exited"]

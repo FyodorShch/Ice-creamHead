@@ -1,9 +1,10 @@
 tool
 extends Button
 
-export(String, FILE) var next_scene_path = "" 
+export(String, FILE) var next_scene_path = ""
 
-func _on_StartButton_button_up():
+func _on_MainMenuButton_button_up():
+	get_tree().paused = false
 	get_tree().change_scene(next_scene_path)
 
 func _get_configuration_warning() -> String:

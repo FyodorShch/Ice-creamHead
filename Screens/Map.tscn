@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://graphics/new-map.png" type="Texture" id=1]
+
+[node name="Map" type="Popup"]
+visible = true
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="New-map" type="Sprite" parent="."]
+position = Vector2( 511.5, 298.5 )
+scale = Vector2( 5.31771, 4.69531 )
+texture = ExtResource( 1 )
