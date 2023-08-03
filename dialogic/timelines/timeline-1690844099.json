@@ -1,0 +1,19 @@
+{
+	"events": [
+		{
+			"character": "character-1690725880.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "a murder  weapon?\n Is this evidence?"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.2
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1690844099.json",
+		"name": "knife"
+	}
+}

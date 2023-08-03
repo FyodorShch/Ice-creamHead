@@ -1,0 +1,19 @@
+{
+	"events": [
+		{
+			"character": "character-1690725880.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[wave]I'm a barbie girl, in a barbie world[/wave]\n[wave]Life in plastic, it's fantastic![/wave]\n[wave]You can brush my hair, undress me everywhere[/wave]\n[wave]Imagination, life is your creation[/wave]"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.2
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1690842866.json",
+		"name": "barbie"
+	}
+}

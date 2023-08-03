@@ -21,17 +21,13 @@ func input(delta):
 		
 	if Input.get_action_strength("ui_right") and !Input.get_action_strength("ui_left"):
 		motion.x += walk_speed  * delta
-		
-		
 	elif Input.get_action_strength("ui_left") and !Input.get_action_strength("ui_right"):
 		motion.x -= walk_speed  * delta
 		
 	if Input.get_action_strength("ui_down") and !Input.get_action_strength("ui_up"):
 		motion.y += walk_speed  * delta
-
-		
 	elif Input.get_action_strength("ui_up") and !Input.get_action_strength("ui_down"):
-		motion.y -= walk_speed  * delta
+		motion.y -= walk_speed * delta
 
 	
 func sprint(delta):
@@ -65,6 +61,17 @@ func animation(delta):
 		else:
 			$AnimatedSprite.play("idleup")
 		
+		
+		
+		
+func map():
+	if Input.is_action_just_pressed('map'):
+		get_tree().change_scene("res://Screens/newmap.tscn")
+		
+		
+		
+		
+		
 func Using(delta):
 		if Input.get_action_strength("use"):
 			$Using.monitoring = true
@@ -74,6 +81,7 @@ func Using(delta):
 			$Using.monitorable = false
 		
 func _physics_process(delta: float) -> void:
+	map()
 	Using(delta)
 	animation(delta)
 	input(delta)

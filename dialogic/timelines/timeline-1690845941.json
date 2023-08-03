@@ -1,0 +1,103 @@
+{
+	"events": [
+		{
+			"animation": "1-fade_in.gd",
+			"animation_length": 1,
+			"animation_wait": true,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1690725880.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"animation": "slide_in_right.gd",
+			"animation_length": 2,
+			"animation_wait": true,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1690845578.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1690725880.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hello, Im a Fred - privat detective"
+		},
+		{
+			"character": "character-1690845578.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hello, Mr Fred, Im a Bean, nice to meet you\nSo... How can I help you?"
+		},
+		{
+			"character": "character-1690725880.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Someone killed Raspi's sister, do you know something about her?"
+		},
+		{
+			"character": "character-1690845578.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I can't believe in it. In our town everyone knows each other and death is unlikely!"
+		},
+		{
+			"character": "character-1690725880.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "But this is true, Mr Bean"
+		},
+		{
+			"character": "character-1690845578.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Oh oh oh... what a bad news... She often join my company...\nWe watched movies and anime with her and her brother\nHole my life I worked in the office for money\nI thought that if there was money, there would be happiness\nAnd when I retired and began to live in this town...\nShe was the first girl I talked to in my life!\nIf doesn't count my mother\nI'm pretty sure Biformia killed Raspi's sister\nBecause she wanted to date her brother and she wouldn't let that dirty... oh"
+		},
+		{
+			"character": "character-1690725880.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Thanks, Bean, I'll look at the house?"
+		},
+		{
+			"character": "character-1690845578.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Of course, mr"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1690845941.json",
+		"name": "beandialog"
+	}
+}

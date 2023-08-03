@@ -111,23 +111,24 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 8.5, 5 )
+extents = Vector2( 8.5, 3 )
 
 [sub_resource type="RectangleShape2D" id=15]
 extents = Vector2( 5.5, 32.5 )
 
 [node name="player" type="KinematicBody2D"]
 script = ExtResource( 1 )
+walk_speed = null
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 4, 3 )
 frames = SubResource( 1 )
 animation = "going"
-frame = 1
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 1, 30 )
+position = Vector2( 1, 32 )
 shape = SubResource( 2 )
 
 [node name="Using" type="Area2D" parent="."]

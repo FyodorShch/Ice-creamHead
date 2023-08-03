@@ -1,0 +1,19 @@
+{
+	"events": [
+		{
+			"character": "character-1690725880.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[wave]All the other kids with the pumped up kicks[/wave]\n[wave]You better run, better run outrun my gun[/wave]"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.2
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1690843852.json",
+		"name": "gun"
+	}
+}

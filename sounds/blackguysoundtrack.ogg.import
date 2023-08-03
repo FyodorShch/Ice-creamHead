@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/blackguysoundtrack.ogg-2457ab47ad957f5f540c4c43a8ee13fc.oggstr"
+
+[deps]
+
+source_file="res://sounds/blackguysoundtrack.ogg"
+dest_files=[ "res://.import/blackguysoundtrack.ogg-2457ab47ad957f5f540c4c43a8ee13fc.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

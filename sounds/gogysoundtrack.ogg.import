@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/gogysoundtrack.ogg-a0de032263844659566dc36362ba46c8.oggstr"
+
+[deps]
+
+source_file="res://sounds/gogysoundtrack.ogg"
+dest_files=[ "res://.import/gogysoundtrack.ogg-a0de032263844659566dc36362ba46c8.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

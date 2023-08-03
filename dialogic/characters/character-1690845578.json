@@ -1,0 +1,21 @@
+{
+	"color": "#ff0be666",
+	"description": "",
+	"display_name": "Bean",
+	"display_name_bool": true,
+	"id": "character-1690845578.json",
+	"mirror_portraits": false,
+	"name": "Bean.json",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://graphics/bean/bean1.png"
+		}
+	],
+	"scale": 500,
+	"theme": "theme-1690845621.cfg"
+}

@@ -1,0 +1,19 @@
+{
+	"events": [
+		{
+			"character": "character-1690725880.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "What is this, someone's transmission?\n[url]https://youtu.be/dQw4w9WgXcQ[/url]"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.2
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1690844991.json",
+		"name": "telek"
+	}
+}

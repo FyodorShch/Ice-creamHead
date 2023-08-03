@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://houseGG.tres" type="TileSet" id=1]
 [ext_resource path="res://objects/player.tscn" type="PackedScene" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://scripts/sistercorpse.gd" type="Script" id=7]
 [ext_resource path="res://scripts/mebel.gd" type="Script" id=8]
 [ext_resource path="res://scripts/cucumber.gd" type="Script" id=9]
+[ext_resource path="res://scripts/houseGG.gd" type="Script" id=10]
+[ext_resource path="res://sounds/barbarissoundtrack.ogg" type="AudioStream" id=11]
 
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 52, 11 )
@@ -41,7 +43,11 @@ extents = Vector2( 2.5, 123.5 )
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 61.5, 3 )
 
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 16, 9 )
+
 [node name="houseGG" type="Node2D"]
+script = ExtResource( 10 )
 
 [node name="BlackGround" type="Sprite" parent="."]
 position = Vector2( 259, 157 )
@@ -143,6 +149,7 @@ shape = SubResource( 6 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 330, 82 )
+walk_speed = 650
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2( 205, 197 )
@@ -166,6 +173,14 @@ shape = SubResource( 4 )
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( -37.5, -130 )
 shape = SubResource( 4 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 40, -142 )
+shape = SubResource( 14 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+autoplay = true
 
 [connection signal="body_entered" from="furniture/mebel" to="furniture/mebel" method="_on_mebel_body_entered"]
 [connection signal="body_exited" from="furniture/mebel" to="furniture/mebel" method="_on_mebel_body_exited"]

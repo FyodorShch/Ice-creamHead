@@ -1,0 +1,91 @@
+{
+	"events": [
+		{
+			"animation": "1-fade_in.gd",
+			"animation_length": 1,
+			"animation_wait": true,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1690725880.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"animation": "1-fade_in.gd",
+			"animation_length": 1,
+			"animation_wait": true,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1690848018.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1690725880.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hello, Im a Fred - privat detective"
+		},
+		{
+			"character": "character-1690848018.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hi, I'm this, what's his name, brother Gogy, that is, I'm Boby.\nHere, did you want to study with me in my dungeon?"
+		},
+		{
+			"character": "character-1690725880.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "No, I just wanted to ask if you know anything about the death of Raspi's sister?"
+		},
+		{
+			"character": "character-1690848018.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Who is Raspi? All I know is that my right buttock is bigger than my left!\nAnd I also have a brother Gogy, here...\nSo, are you going to study with me? Can I become your master?"
+		},
+		{
+			"character": "character-1690725880.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Next time, can I see your house?"
+		},
+		{
+			"character": "character-1690848018.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "My dungeon? Sure."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1690848222.json",
+		"name": "BobyDialog"
+	}
+}

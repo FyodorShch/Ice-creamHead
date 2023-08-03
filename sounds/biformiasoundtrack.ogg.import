@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/biformiasoundtrack.ogg-a9daa2da395521377817651889dddcf4.oggstr"
+
+[deps]
+
+source_file="res://sounds/biformiasoundtrack.ogg"
+dest_files=[ "res://.import/biformiasoundtrack.ogg-a9daa2da395521377817651889dddcf4.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

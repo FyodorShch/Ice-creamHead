@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/bastardsoundtrack.ogg-7666ae561bc3b84421a5c1f41156cf63.oggstr"
+
+[deps]
+
+source_file="res://sounds/bastardsoundtrack.ogg"
+dest_files=[ "res://.import/bastardsoundtrack.ogg-7666ae561bc3b84421a5c1f41156cf63.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

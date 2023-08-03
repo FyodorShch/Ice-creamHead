@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/beansoundtrack.ogg-d600bf66a2c9904ba6259c6d0554d9a0.oggstr"
+
+[deps]
+
+source_file="res://sounds/beansoundtrack.ogg"
+dest_files=[ "res://.import/beansoundtrack.ogg-d600bf66a2c9904ba6259c6d0554d9a0.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
