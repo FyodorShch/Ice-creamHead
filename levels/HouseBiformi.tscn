@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://graphics/BlackGround.png" type="Texture" id=1]
 [ext_resource path="res://houseGG.tres" type="TileSet" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://levels/bench.gd" type="Script" id=14]
 [ext_resource path="res://levels/rat.gd" type="Script" id=15]
 [ext_resource path="res://levels/red.gd" type="Script" id=16]
+[ext_resource path="res://Screens/PauseMenu.tscn" type="PackedScene" id=17]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -106,7 +107,6 @@ tile_data = PoolIntArray( -458784, 32, 0, -523973, 32, 0, 327683, 63, 0, 983188,
 [node name="biformia" type="AnimatedSprite" parent="."]
 position = Vector2( 323, 93 )
 frames = SubResource( 1 )
-frame = 1
 playing = true
 
 [node name="biform" type="Area2D" parent="biformia"]
@@ -212,6 +212,11 @@ shape = SubResource( 14 )
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="mebel"]
 position = Vector2( 203.5, 115.25 )
 shape = SubResource( 15 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+pause_mode = 2
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource( 17 )]
 
 [connection signal="body_entered" from="biformia/biform" to="biformia/biform" method="_on_biform_body_entered"]
 [connection signal="body_exited" from="biformia/biform" to="biformia/biform" method="_on_biform_body_exited"]

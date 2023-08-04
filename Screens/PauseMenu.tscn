@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Screens/Buttons/RetryButton.gd" type="Script" id=1]
 [ext_resource path="res://Screens/SettingsMenu.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Graphic/main_theme.tres" type="Theme" id=4]
 [ext_resource path="res://Screens/PauseMenu.gd" type="Script" id=5]
 [ext_resource path="res://Screens/Buttons/SettingsButton.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Screens/Buttons/MainMenuButton.gd" type="Script" id=7]
 
 [node name="PauseMenu" type="Control"]
 anchor_right = 1.0
@@ -14,6 +15,7 @@ theme = ExtResource( 4 )
 script = ExtResource( 5 )
 
 [node name="PauseOverlay" type="ColorRect" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 1, 0.85098, 0.85098, 1 )
@@ -62,6 +64,8 @@ size_flags_vertical = 3
 custom_colors/font_color = Color( 0.882813, 0.34724, 0.34724, 1 )
 text = "Main menu"
 flat = true
+script = ExtResource( 7 )
+next_scene_path = "res://Screens/StartMenu.tscn"
 
 [node name="QuitButton" parent="PauseOverlay/PauseMenu" instance=ExtResource( 3 )]
 margin_left = 0.0
@@ -75,3 +79,4 @@ custom_colors/font_color = Color( 0.882813, 0.34724, 0.34724, 1 )
 
 [connection signal="pressed" from="PauseOverlay/PauseMenu/RetryButton" to="PauseOverlay/PauseMenu/RetryButton" method="_on_RetryButton_pressed"]
 [connection signal="pressed" from="PauseOverlay/PauseMenu/SettingsButton" to="." method="_on_SettingsButton_pressed"]
+[connection signal="button_up" from="PauseOverlay/PauseMenu/MainMenuButton" to="PauseOverlay/PauseMenu/MainMenuButton" method="_on_MainMenuButton_button_up"]

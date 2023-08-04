@@ -81,15 +81,11 @@ text = "Quit"
 flat = true
 script = ExtResource( 3 )
 
-[node name="SettingsMenu" parent="Camera2D" instance=ExtResource( 7 )]
-margin_left = -517.0
-margin_top = -297.0
-margin_right = -517.0
-margin_bottom = -297.0
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Camera2D"]
 stream = ExtResource( 4 )
 autoplay = true
+
+[node name="SettingsMenu" parent="." instance=ExtResource( 7 )]
 
 [connection signal="pressed" from="Camera2D/Menu/StartButton" to="Camera2D/Menu/StartButton" method="_on_StartButton_pressed"]
 [connection signal="pressed" from="Camera2D/Menu/SettingsButton" to="." method="_on_SettingsButton_pressed"]

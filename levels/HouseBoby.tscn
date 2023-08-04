@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://graphics/BlackGround.png" type="Texture" id=1]
 [ext_resource path="res://houseGG.tres" type="TileSet" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://levels/plakat.gd" type="Script" id=8]
 [ext_resource path="res://levels/gantel.gd" type="Script" id=9]
 [ext_resource path="res://sounds/bobysoundtrack.ogg" type="AudioStream" id=10]
+[ext_resource path="res://Screens/PauseMenu.tscn" type="PackedScene" id=11]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -173,6 +174,11 @@ shape = SubResource( 13 )
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 10 )
 autoplay = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+pause_mode = 2
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource( 11 )]
 
 [connection signal="body_entered" from="AnimatedSprite/boby" to="AnimatedSprite/boby" method="_on_boby_body_entered"]
 [connection signal="body_exited" from="AnimatedSprite/boby" to="AnimatedSprite/boby" method="_on_boby_body_exited"]

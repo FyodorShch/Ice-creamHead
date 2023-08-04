@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://objects/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://graphics/BlackGround.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://levels/gun.gd" type="Script" id=9]
 [ext_resource path="res://levels/fish.gd" type="Script" id=10]
 [ext_resource path="res://levels/knife.gd" type="Script" id=11]
+[ext_resource path="res://Screens/PauseMenu.tscn" type="PackedScene" id=12]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -91,6 +92,7 @@ tile_data = PoolIntArray( 95, 64, 0, 65687, 65, 0, 1507413, 43, 0, 1572984, 42, 
 position = Vector2( 327, 90 )
 scale = Vector2( 0.734375, 0.71875 )
 frames = SubResource( 1 )
+frame = 1
 playing = true
 
 [node name="bas" type="Area2D" parent="AnimatedSprite"]
@@ -171,6 +173,11 @@ script = ExtResource( 11 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="knife"]
 position = Vector2( 122, 11 )
 shape = SubResource( 11 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+pause_mode = 2
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource( 12 )]
 
 [connection signal="body_entered" from="AnimatedSprite/bas" to="AnimatedSprite/bas" method="_on_bas_body_entered"]
 [connection signal="body_exited" from="AnimatedSprite/bas" to="AnimatedSprite/bas" method="_on_bas_body_exited"]

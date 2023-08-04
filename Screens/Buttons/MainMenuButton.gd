@@ -1,7 +1,7 @@
 tool
 extends Button
 
-export(String, FILE) var next_scene_path = ""
+export(String, FILE) var next_scene_path = "res://levels/houseGG.tscn"
 
 func _on_MainMenuButton_button_up():
 	get_tree().paused = false

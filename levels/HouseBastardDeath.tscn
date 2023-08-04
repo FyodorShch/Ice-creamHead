@@ -1,10 +1,11 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://objects/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://graphics/BlackGround.png" type="Texture" id=2]
 [ext_resource path="res://houseGG.tres" type="TileSet" id=3]
 [ext_resource path="res://graphics/Bastard/pizsec.png" type="Texture" id=4]
 [ext_resource path="res://levels/death.gd" type="Script" id=5]
+[ext_resource path="res://Screens/PauseMenu.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scripts/cucumber.gd" type="Script" id=7]
 [ext_resource path="res://sounds/bastardsoundtrack.ogg" type="AudioStream" id=8]
 [ext_resource path="res://levels/gun.gd" type="Script" id=9]
@@ -160,6 +161,11 @@ script = ExtResource( 5 )
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 311, 208 )
 shape = SubResource( 13 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+pause_mode = 2
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource( 6 )]
 
 [connection signal="body_entered" from="cucumber" to="cucumber" method="_on_cucumber_body_entered"]
 [connection signal="body_exited" from="cucumber" to="cucumber" method="_on_cucumber_body_exited"]

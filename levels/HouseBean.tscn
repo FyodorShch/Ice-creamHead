@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://graphics/BlackGround.png" type="Texture" id=1]
 [ext_resource path="res://houseGG.tres" type="TileSet" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://levels/nagrada.gd" type="Script" id=13]
 [ext_resource path="res://levels/gramota2.gd" type="Script" id=14]
 [ext_resource path="res://levels/flower.gd" type="Script" id=15]
+[ext_resource path="res://Screens/PauseMenu.tscn" type="PackedScene" id=16]
 
 [sub_resource type="SpriteFrames" id=7]
 animations = [ {
@@ -195,6 +196,11 @@ script = ExtResource( 15 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="flower"]
 position = Vector2( 222, 78 )
 shape = SubResource( 13 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+pause_mode = 2
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource( 16 )]
 
 [connection signal="body_entered" from="AnimatedSprite/bean" to="AnimatedSprite/bean" method="_on_bean_body_entered"]
 [connection signal="body_exited" from="AnimatedSprite/bean" to="AnimatedSprite/bean" method="_on_bean_body_exited"]
